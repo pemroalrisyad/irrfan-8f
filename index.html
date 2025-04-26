@@ -1,1 +1,75 @@
-<h1>halo nama saya irfan</h1>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website SSC Tuatara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #4d4d4d);
+            background-image: url('futuristic_background.jpg'); /* Ganti dengan gambar latar belakang futuristik */
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+            position: relative;
+            overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
+        }
+
+        .animate {
+            width: 80%;
+            max-width: 800px;
+            transition: transform 0.5s;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            position: absolute; /* Mengatur posisi gambar */
+            animation: move 10s linear infinite; /* Menambahkan animasi bergerak */
+        }
+
+        @keyframes move {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .animate:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mobil SSC Tuatara</h1>
+    </header>
+    <section class="gallery">
+        <img src="ssc_tuatara.jpg" alt="SSC Tuatara" class="animate">
+    </section>
+    <footer>
+        <p>Hak Cipta © 2025</p>
+    </footer>
+</body>
+</html>
