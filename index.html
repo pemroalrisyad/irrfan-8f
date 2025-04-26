@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website SSC Tuatara</title>
+    <title>Website Lamborghini</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #1a1a1a, #4d4d4d);
-            background-image: url('futuristic_background.jpg'); /* Ganti dengan gambar latar belakang futuristik */
-            background-size: cover;
-            background-position: center;
+            background: linear-gradient(135deg, #000000, #333333);
+            color: white;
             margin: 0;
             padding: 0;
-            color: white;
         }
 
         header {
             text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 215, 0, 0.8);
+            border-bottom: 5px solid #ffcc00;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border: 1px solid #ffcc00;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 215, 0, 0.5);
+        }
+
+        .content {
+            text-align: center;
+            margin: 20px;
             padding: 20px;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
@@ -27,34 +51,26 @@
             display: flex;
             justify-content: center;
             margin: 20px;
-            position: relative;
-            overflow: hidden; /* Menyembunyikan bagian gambar yang keluar dari kontainer */
+            flex-wrap: wrap;
         }
 
-        .animate {
-            width: 80%;
-            max-width: 800px;
-            transition: transform 0.5s;
+        .gallery img {
+            width: 300px;
+            margin: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            position: absolute; /* Mengatur posisi gambar */
-            animation: move 10s linear infinite; /* Menambahkan animasi bergerak */
+            transition: transform 0.3s;
         }
 
-        @keyframes move {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
-        }
-
-        .animate:hover {
+        .gallery img:hover {
             transform: scale(1.05);
         }
 
         footer {
             text-align: center;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
+            background-color: rgba(255, 215, 0, 0.8);
+            border-top: 5px solid #ffcc00;
             position: relative;
             bottom: 0;
             width: 100%;
@@ -63,13 +79,32 @@
 </head>
 <body>
     <header>
-        <h1>Mobil SSC Tuatara</h1>
+        <h1>Lamborghini</h1>
     </header>
-    <section class="gallery">
-        <img src="ssc_tuatara.jpg" alt="SSC Tuatara" class="animate">
+    <nav>
+        <a href="#penjelasan">Penjelasan</a>
+        <a href="#gallery">Galeri</a>
+    </nav>
+    <section id="penjelasan" class="content">
+        <h2>Tentang Lamborghini</h2>
+        <p>Lamborghini adalah produsen mobil mewah asal Italia yang dikenal dengan mobil supernya yang berperforma tinggi. Didirikan oleh Ferruccio Lamborghini pada tahun 1963, perusahaan ini telah menciptakan beberapa model ikonik seperti Lamborghini Miura, Countach, dan Aventador.</p>
+        <h3>Spesifikasi Utama:</h3>
+        <ul>
+            <li><strong>Mesin:</strong> V10 atau V12</li>
+            <li><strong>Daya Maksimum:</strong> Hingga 770 hp (pada model Aventador)</li>
+            <li><strong>Torsi:</strong> Hingga 720 Nm</li>
+            <li><strong>Kecepatan Maksimum:</strong> 350 km/h (pada model Aventador)</li>
+            <li><strong>0-100 km/h:</strong> Sekitar 2.9 detik</li>
+        </ul>
+    </section>
+    <section id="gallery" class="gallery">
+        <img src="lamborghini1.jpg" alt="Lamborghini 1">
+        <img src="lamborghini2.jpg" alt="Lamborghini 2">
+        <img src="lamborghini3.jpg" alt="Lamborghini 3">
+        <img src="lamborghini4.jpg" alt="Lamborghini 4">
     </section>
     <footer>
-        <p>Hak Cipta © 2025</p>
+        <p>Hak Cipta © 2025 Lamborghini Fan Page</p>
     </footer>
 </body>
 </html>
